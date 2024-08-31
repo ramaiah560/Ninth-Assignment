@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Taking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="test.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Assessment: <span id="assessmentTitle">Mathematics Quiz</span></h1>
+    </header>
+    <main>
+        <section id="instructions">
+            <h2>Instructions</h2>
+            <p id="instructionsText">Please complete all questions within the given time limit.</p>
+        </section>
+
+        <section id="timer">
+            <h2>Time Remaining</h2>
+            <div id="timerDisplay">00:00</div>
+        </section>
+
+        <section id="questions">
+            <div id="questionNavigation">
+                <button id="prevQuestionBtn" onclick="navigateQuestion(-1)">Previous</button>
+                <button id="nextQuestionBtn" onclick="navigateQuestion(1)">Next</button>
+                <div id="questionIndicator">Question 1 of 5</div>
+            </div>
+
+            <div id="questionDisplay">
+                <!-- Question content will be loaded here -->
+            </div>
+        </section>
+
+        <section id="answerInput">
+            <!-- Answer input fields will be displayed here -->
+        </section>
+
+        <section id="controls">
+            <button id="saveProgressBtn" onclick="saveProgress()">Save Progress</button>
+            <button id="submitAssessmentBtn" onclick="submitAssessment()">Submit Assessment</button>
+        </section>
+
+        <section id="feedback" style="display: none;">
+            <h2>Feedback</h2>
+            <p id="feedbackText">Feedback will be shown here.</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
